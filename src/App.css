@@ -1,0 +1,84 @@
+/* App wrapper */
+.app {
+  position: relative;
+  z-index: 1;
+}
+
+/* Custom cursor */
+.cursor {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  border: 1.5px solid var(--clr-primary);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transition: width 0.3s, height 0.3s, border-color 0.3s, background 0.3s;
+  will-change: transform;
+}
+
+.cursor.cursor--hover {
+  width: 60px;
+  height: 60px;
+  background: var(--clr-primary-glow);
+  border-color: var(--clr-primary);
+}
+
+.cursor-dot {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background: var(--clr-primary);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  will-change: transform;
+}
+
+@media (max-width: 1024px) {
+  .cursor, .cursor-dot { display: none; }
+}
+
+/* Scroll progress bar */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--clr-primary), var(--clr-accent));
+  z-index: 9997;
+  transition: width 0.1s linear;
+  border-radius: 0 2px 2px 0;
+}
+
+/* Back to top */
+.back-to-top {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 999;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--clr-surface);
+  border: 1.5px solid var(--clr-border);
+  color: var(--clr-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+}
+
+.back-to-top:hover {
+  background: var(--clr-primary);
+  border-color: var(--clr-primary);
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px var(--clr-primary-glow);
+}
+
+@media (max-width: 768px) {
+  .back-to-top { bottom: 20px; right: 20px; }
+}

@@ -1,0 +1,168 @@
+.edu {
+  position: relative;
+  overflow: hidden;
+}
+
+.edu__bg-accent {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(34, 211, 238, 0.06) 0%, transparent 70%);
+  top: -100px;
+  left: -200px;
+  pointer-events: none;
+}
+
+.edu__cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 24px;
+  margin-top: 56px;
+  margin-bottom: 60px;
+}
+
+.edu__card {
+  padding: 32px;
+}
+
+.edu__card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.edu__icon {
+  font-size: 2.2rem;
+  line-height: 1;
+}
+
+.edu__badge {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--clr-primary);
+  background: rgba(167, 139, 250, 0.1);
+  border: 1px solid rgba(167, 139, 250, 0.25);
+  padding: 6px 14px;
+  border-radius: 999px;
+  letter-spacing: 0.05em;
+}
+
+.edu__degree {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--clr-text);
+  margin-bottom: 6px;
+}
+
+.edu__field {
+  font-size: 0.9rem;
+  color: var(--clr-accent);
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.edu__institution {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  color: var(--clr-text-muted);
+  margin-bottom: 12px;
+}
+
+.edu__grade {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--clr-primary);
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.edu__highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* Certifications */
+.edu__certs-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--clr-text);
+  margin-bottom: 20px;
+}
+
+.edu__certs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.edu__cert {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 24px;
+}
+
+.edu__cert-icon {
+  font-size: 1.6rem;
+  flex-shrink: 0;
+}
+
+.edu__cert-name {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--clr-text);
+  margin-bottom: 4px;
+}
+
+.edu__cert-org {
+  font-size: 0.76rem;
+  color: var(--clr-text-muted);
+  font-family: var(--font-mono);
+}
+
+@media (max-width: 768px) {
+  .edu__cards { grid-template-columns: 1fr; }
+}
+
+/* Achievements */
+.edu__achievements {
+  margin-top: 48px;
+}
+
+.edu__ach-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.edu__ach-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px 24px;
+}
+
+.edu__ach-icon {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.edu__ach-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--clr-text);
+  margin-bottom: 4px;
+}
+
+.edu__ach-sub {
+  font-size: 0.78rem;
+  color: var(--clr-text-muted);
+  line-height: 1.5;
+}
+
